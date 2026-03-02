@@ -180,7 +180,6 @@ local manufacturing_techs = {
 local tech_util = {}
 
 local unit_ingredients = {}
-log("target " .. serpent.block(target))
 ---@param ingredients table<TechnologyPrototype>
 local function highest_pack(tech)
     local highest = 1
@@ -193,7 +192,6 @@ local function highest_pack(tech)
     else
         for _, ingredient in pairs(tech.unit.ingredients) do
             local item_name = ingredient[1]
-            log(item_name)
             if target[item_name] then
                 if highest < target[item_name].rating then
                     highest = target[item_name].rating
