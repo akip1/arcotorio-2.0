@@ -8,7 +8,7 @@ local recipe_util = require("scripts.recipe_util")
 ---@as {[string]: {[string]: Milestone_Data}}
 local milestones = {
     ["vanilla"] = {
-        ["satellite"] =                 {rating = 5, tech = data.raw["technology"]["space-science-pack"],       raw = "space-science-pack"},
+        ["space-science-pack"] =                 {rating = 5, tech = data.raw["technology"]["space-science-pack"],       raw = "space-science-pack"},
         ["production-science-pack"] =   {rating = 4, tech = data.raw["technology"]["production-science-pack"],  raw = "production-science-pack"},
         ["utility-science-pack"] =      {rating = 4, tech = data.raw["technology"]["utility-science-pack"],     raw = "utility-science-pack"},
         ["chemical-science-pack"] =     {rating = 3, tech = data.raw["technology"]["chemical-science-pack"],    raw = "chemical-science-pack"},
@@ -180,22 +180,31 @@ local manufacturing_techs = {
 local tech_util = {}
 
 local unit_ingredients = {}
-
----@param ingredients table<TechnologyPrototypeFilter.research_unit_ingredient>
-local function highest_pack(ingredients)
+log("target " .. serpent.block(target))
+---@param ingredients table<TechnologyPrototype>
+local function highest_pack(tech)
     local highest = 1
-    for _, ingredient in pairs(ingredients) do
-        local item_name = ingredient.name or ingredient[1] -- Handle both table formats
-        if target[item_name] then
-            if highest < target[item_name].rating then
-                highest = target[item_name].rating
-            end
-        elseif unit_ingredients[item_name] then
-            if highest < unit_ingredients[item_name] then
-                highest = unit_ingredients[item_name]
-            end
+    if tech.research_trigger then
+        if tech.prerequisites and tech.prerequisites ~= {} then
+            return highest_pack(data.raw.technology[tech.prerequisites[1]])
         else
-            log("Arcotorio: Warning: Missing target entry for " .. (item_name or "unknown item"))
+            return 1
+        end
+    else
+        for _, ingredient in pairs(tech.unit.ingredients) do
+            local item_name = ingredient[1]
+            log(item_name)
+            if target[item_name] then
+                if highest < target[item_name].rating then
+                    highest = target[item_name].rating
+                end
+            elseif unit_ingredients[item_name] then
+                if highest < unit_ingredients[item_name] then
+                    highest = unit_ingredients[item_name]
+                end
+            else
+                log("Arcotorio: Warning: Missing target entry for " .. (item_name or "unknown item"))
+            end
         end
     end
     return highest
@@ -203,17 +212,19 @@ end
 
 tech_util.preprocess_tech_tree = function()
     for _name, tech in pairs(data.raw["technology"]) do
-        for _, ingredient in pairs(tech.unit.ingredients) do
-            unit_ingredients[ingredient.name or ingredient[1]] = 1
+        if tech.unit then
+            for _, ingredient in pairs(tech.unit.ingredients) do
+                unit_ingredients[ingredient[1]] = 1
+            end
         end
     end
     for _name, tech in pairs(data.raw["technology"]) do
         if not tech.effects then goto no_effects end
-        local highest = highest_pack(tech.unit.ingredients)
+        local highest = highest_pack(tech)
         for index, effect in pairs(tech.effects) do
-            if effect.type ~= "unlock-recipe" then goto not_recipe end
-            if unit_ingredients[effect.recipe] then unit_ingredients[effect.recipe] = highest end
-            ::not_recipe::
+            if effect.type == "unlock-recipe" then
+                if unit_ingredients[effect.recipe] then unit_ingredients[effect.recipe] = highest end
+            end
         end
         ::no_effects::
     end
@@ -227,9 +238,7 @@ local add_to_queue = function(tech, recipe, tier)
         queue[tech.name][recipe.name] = recipe
         processed_recipes[recipe.name] = true
     elseif recipe then
-        if recipe.normal    then recipe.normal.enabled = true end
-        if recipe.expensive then recipe.expensive.enabled = true end
-        if not (recipe.normal and recipe.expensive) then recipe.enabled = true end
+        recipe.enabled = true
     end
 end
 
@@ -239,10 +248,17 @@ tech_util.process_queue = function()
         if not recipes then error('no recipe added') end
         for recipe_name, recipe in pairs(recipes) do
             if not data.raw["recipe"][recipe_name] then data:extend{recipe} end
+            for _, effect in pairs(tech.effects) do
+                if effect.type == "unlock-recipe" and effect.recipe == recipe_name then
+                    goto continue
+                end
+            end
             table.insert(tech.effects, {
                 type = "unlock-recipe",
                 recipe = recipe_name
             })
+
+            ::continue::
         end
         queue[tech_name] = nil
     end
@@ -285,19 +301,18 @@ local invalid_categories = {
     ["void-crushing"] = true,
 }
 
-local prod_list = data.raw["module"]["productivity-module"].limitation
-if not prod_list then error("Default productivity 1 module has no limitation. Please contact mod author") end
+local prod_list = {}
 
 ---@param recipe_name string
 ---@param tech ?data.TechnologyPrototype
 ---@param tier ?int
 tech_util.process_recipe = function(recipe_name, tech, tier)
     tier = tier or 1
+    if tier < 1 then tier = 1 end
     if not recipe_name then error("recipe_name missing: " .. serpent.block(tech)) end
 
     -- Get the recipe to check its subgroup
     local recipe = data.raw["recipe"][recipe_name]
-    local is_intermediate = false
 --[[ 
     if recipe.icons and recipe.icon_size then
         log("AUGGHGGHHGHGH:" .. recipe.category)
@@ -313,13 +328,7 @@ tech_util.process_recipe = function(recipe_name, tech, tier)
         return
     end
 
-    if recipe and recipe.category and invalid_categories[recipe.category] then return end
-
-    for _, prod in pairs(prod_list) do
-        if prod == recipe.name then 
-            is_intermediate = true 
-        end
-    end
+    if recipe.category and invalid_categories[recipe.category] then return end
 
     if target[recipe.name] and target[recipe.name].tech then
         tier = tier + 1
@@ -329,26 +338,29 @@ tech_util.process_recipe = function(recipe_name, tech, tier)
     -- TODO add "Hard Mode" setting to disable this feature
     local difference = 1
     local improvement = tier
-    if is_intermediate then
+    if recipe.allow_productivity then
         while improvement < 5 do
             improvement = improvement + 1
             difference = difference + 1
             for _, manufacture_data in pairs(manufacturing_techs) do
                 if manufacture_data.rating == improvement then
-                    new_recipe = table.deepcopy(recipe)
+                    local new_recipe = table.deepcopy(recipe)
                     local create = recipe_util.recreate(new_recipe, orb_tiers[improvement], 6 - difference, 1)
-                    if create then add_to_queue(manufacture_data.tech, create)
-                    else return false end
-                    table.insert(prod_list, new_recipe.name)
-                    table.insert(data.raw["module"]["productivity-module-2"].limitation, new_recipe.name)
-                    table.insert(data.raw["module"]["productivity-module-3"].limitation, new_recipe.name)
+                    if create then 
+                        add_to_queue(manufacture_data.tech, create)
+                    else
+                        return false
+                    end
                 end
             end
         end
     end
-    local create = recipe_util.recreate(recipe, orb_tiers[tier])
-    if create then add_to_queue(tech, recipe)
-    else return false end
+    local create = recipe_util.recreate(recipe, orb_tiers[tier], tier)
+    if create then 
+        add_to_queue(tech, recipe)
+    else
+        return false
+    end
 --[[ 
     data.raw["recipe"][recipe_name].enabled = false
     if data.raw["recipe"][recipe_name].normal then data.raw["recipe"][recipe_name].normal.enabled = false end
@@ -358,8 +370,8 @@ end
 
 tech_util.process_tech_tree = function()
     for _name, tech in pairs(data.raw["technology"]) do
-        local highest = highest_pack(tech.unit.ingredients)
         if not tech.effects then goto no_effects end
+        local highest = highest_pack(tech)
         for index, effect in pairs(tech.effects) do
             if effect.type ~= "unlock-recipe" then goto not_recipe end
             if processed_recipes[effect.recipe] then
@@ -367,7 +379,7 @@ tech_util.process_tech_tree = function()
                 goto not_recipe
             end
             if tech_util.process_recipe(effect.recipe, tech, highest) then
-                tech.effects[index] = nil
+                effect = nil
             end
             ::not_recipe::
         end
@@ -393,6 +405,9 @@ tech_util.place_manufacturing = function()
         for _, milestone in pairs(target) do
             if manufacture_data.rating == milestone.rating then
                 manufacture_data.tech.prerequisites[#manufacture_data.tech.prerequisites + 1] = milestone.tech.name
+                if milestone.tech.name == "space-science-pack" then
+                    manufacture_data.tech.unit = table.deepcopy(data.raw.technology["rocket-silo"].unit)
+                end
                 manufacture_data.tech.unit = manufacture_data.tech.unit or table.deepcopy(milestone.tech.unit)
                 table.insert(manufacture_data.tech.unit.ingredients, {milestone.raw, 1})
             end

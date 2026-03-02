@@ -19,3 +19,5 @@ The Arcos:
     McArcospheres: Taco Bell, Jimmy John’s, Wendy’s, McDonald’s, Walmart, Tesco, White Castle, KFC, Subway
 
 This mod was a collab between me and ArchEzekiel, who did a huge portion of the code and graphics. 
+
+(This 2.0 port was made by @akipgamer, https://github.com/akip1/arcotorio-2.0)

@@ -23,10 +23,7 @@ tech.process_tech_tree()
 --search for recipes that are enabled by default, rather than unlocked by techs
 local queue = {}
 for _, recipe in pairs(data.raw["recipe"]) do
-    if not (recipe.normal and recipe.expensive) and recipe.enabled ~= false then
-        table.insert(queue, recipe.name)
-    elseif recipe.normal and recipe.expensive and
-            recipe.normal.enabled ~= false and recipe.expensive.enabled ~= false then
+    if recipe.enabled ~= false then
         table.insert(queue, recipe.name)
     end
 end

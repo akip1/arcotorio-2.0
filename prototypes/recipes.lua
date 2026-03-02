@@ -6,8 +6,7 @@ local bead = {
     name = "Arco-bead",
     subgroup = "Arco-bead-arcofolding",
     category = "arcofolding",
-    result = "Arco-bead",
-    result_count = 10,
+    results = {{type = "item", name = "Arco-bead", amount = 10}},
     energy_required = 10,
     enabled = false,
     order = "a[Arco-bead]",
@@ -23,8 +22,7 @@ local hand_bead = {
     name = "hand-Arco-bead",
     subgroup = "hand-Arco-bead-arcofolding",
     category = "crafting",
-    result = "Arco-bead",
-    result_count = 10,
+    results = {{type = "item", name = "Arco-bead", amount = 10}},
     energy_required = 10,
     enabled = false,
     order = "a[Arco-bead]",
@@ -40,8 +38,7 @@ local orb = {
     name = "Arco-orb",
     subgroup = "Arco-orb-arcofolding",
     category = "arcofolding",
-    result = "Arco-orb",
-    result_count = 10,
+    results = {{type = "item", name = "Arco-orb", amount = 10}},
     energy_required = 10,
     enabled = false,
     order = "a[Arco-orb]",
@@ -57,8 +54,7 @@ local boulder = {
     name = "Arco-boulder",
     subgroup = "Arco-boulder-arcofolding",
     category = "arcofolding",
-    result = "Arco-boulder",
-    result_count = 10,
+    results = {{type = "item", name = "Arco-boulder", amount = 10}},
     energy_required = 10,
     enabled = false,
     order = "a[Arco-boulder]",
@@ -74,8 +70,7 @@ local planet = {
     name = "Arco-planet",
     subgroup = "Arco-planet-arcofolding",
     category = "arcofolding",
-    result = "Arco-planet",
-    result_count = 10,
+    results = {{type = "item", name = "Arco-planet", amount = 10}},
     energy_required = 10,
     enabled = false,
     order = "a[Arco-planet]",
@@ -91,8 +86,7 @@ local mcarco = {
     name = "McArco-sphere",
     subgroup = "McArco-sphere-arcofolding",
     category = "arcofolding",
-    result = "McArco-sphere",
-    result_count = 10,
+    results = {{type = "item", name = "McArco-sphere", amount = 10}},
     energy_required = 10,
     enabled = false,
     order = "a[McArco-sphere]",
@@ -107,28 +101,26 @@ local arcofolder = {
     type = "recipe",
     name = "Arcofolder",
     category = "crafting",
-    result = "Arcofolder",
-    result_count = 1,
+    results = {{type = "item", name = "Arcofolder", amount = 1}},
     ingredients = {
-        {name = "electronic-circuit", amount = 5},
-        {name = "iron-plate", amount = 8},
-        {name = "iron-gear-wheel", amount = 6}
+        {type = "item", name = "electronic-circuit", amount = 5},
+        {type = "item", name = "iron-plate", amount = 8},
+        {type = "item", name = "iron-gear-wheel", amount = 6}
     },
     energy_required = 4,
-    enabled = false
+    enabled = false 
 }
 local adv_arcofolder = {
     icons = {{icon = "__arcotorio__/graphics/arcofolder/arcofolder-icon.png", tint = {0, 1, 0}, icon_size = 64}},
     type = "recipe",
     name = "Advanced-Arcofolder",
     category = "crafting",
-    result = "Advanced-Arcofolder",
-    result_count = 1,
+    results = {{type = "item", name = "Advanced-Arcofolder", amount = 1}},
     ingredients = {
-        {name = "advanced-circuit", amount = 10},
-        {name = "Arcofolder", amount = 2},
-        {name = "engine-unit", amount = 4},
-        {name = "steel-plate", amount = 6}
+        {type = "item", name = "advanced-circuit", amount = 10},
+        {type = "item", name = "Arcofolder", amount = 2},
+        {type = "item", name = "engine-unit", amount = 4},
+        {type = "item", name = "steel-plate", amount = 6}
     },
     energy_required = 4,
     enabled = false
@@ -138,14 +130,13 @@ local mcarcofolder = {
     type = "recipe",
     name = "McArcofolder",
     category = "crafting",
-    result = "McArcofolder",
-    result_count = 1,
+    results = {{type = "item", name = "McArcofolder", amount = 1}},
     ingredients = {
-        {name = "processing-unit", amount = 5},
-        {name = "low-density-structure", amount = 10},
-        {name = "Advanced-Arcofolder", amount = 2},
-        {name = "effectivity-module", amount = 2},
-        {name = "speed-module", amount = 2}
+        {type = "item", name = "processing-unit", amount = 5},
+        {type = "item", name = "low-density-structure", amount = 10},
+        {type = "item", name = "Advanced-Arcofolder", amount = 2},
+        {type = "item", name = "efficiency-module", amount = 2},
+        {type = "item", name = "speed-module", amount = 2}
     },
     energy_required = 4,
     enabled = false
@@ -156,8 +147,7 @@ local folds = {
         ingredients = {
             {name = "Rock-Arco-bead", amount = 1}
         },
-        result = "Paper-Arco-bead",
-        result_count = 1,
+        results = {{type = "item", name = "Paper-Arco-bead", amount = 1}},
         seconds = 1,
         category = "crafting",
         localised_name = {"recipe-name.hand-Paper-Arco-bead"},
@@ -168,8 +158,7 @@ local folds = {
         ingredients = {
             {name = "Scissors-Arco-bead", amount = 1}
         },
-        result = "Rock-Arco-bead",
-        result_count = 1,
+        results = {{type = "item", name = "Rock-Arco-bead", amount = 1}},
         seconds = 1,
         category = "crafting",
         localised_name = {"recipe-name.hand-Rock-Arco-bead"},
@@ -180,8 +169,7 @@ local folds = {
         ingredients = {
             {name = "Paper-Arco-bead", amount = 1}
         },
-        result = "Scissors-Arco-bead",
-        result_count = 1,
+        results = {{type = "item", name = "Scissors-Arco-bead", amount = 1}},
         seconds = 1,
         category = "crafting",
         localised_name = {"recipe-name.hand-Scissors-Arco-bead"},
@@ -382,8 +370,10 @@ local function process_table(item_table, ing_count, out_count, subgroup, ing_siz
             end
         end
     else
-        recipe.result = item_table[index].name
-        recipe.result_count = ing_size * ing_count
+        --recipe.result = item_table[index].name
+        --recipe.result_count = ing_size * ing_count
+
+        recipe.results = {{type = "item", name = item_table[index].name, amount = ing_size * ing_count}}
     end
 
     for i = 1, ing_count, 1 do
@@ -433,8 +423,6 @@ for _, recipe_data in pairs(folds) do
         tint = recipe_data.tint,
         category = recipe_data.category or "arcofolding",
         subgroup = recipe_data.subgroup,
-        result = recipe_data.result,
-        result_count = recipe_data.result_count,
         results = recipe_data.results,
         ingredients = recipe_data.ingredients,
         energy_required = recipe_data.seconds or 1,
@@ -448,6 +436,15 @@ for _, recipe_data in pairs(folds) do
             quaternary = recipe_data.quaternary or UNASSIGNED_COLOR
         }
     }--[[@as data.RecipePrototype]]
+
+    for i in pairs(recipe.ingredients) do
+        recipe.ingredients[i].type = "item"
+    end
+    
+    for i in pairs(recipe.results) do
+        recipe.results[i].type = "item"
+    end
+
     data:extend{recipe}
 end
 

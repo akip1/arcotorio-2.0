@@ -81,15 +81,7 @@ return {
         end
 
         -- Modify recipe time
-        if recipe.normal then
-            recipe.normal.energy_required = (recipe.normal.energy_required or 0.5) * scale
-        end
-        if recipe.expensive then
-            recipe.expensive.energy_required = (recipe.expensive.energy_required or 0.5) * scale
-        end
-        if not recipe.normal then
-            recipe.energy_required = (recipe.energy_required or 0.5) * scale
-        end
+        recipe.energy_required = (recipe.energy_required or 0.5) * scale
 
         -- Extend the data with the modified recipe
         if recipe then

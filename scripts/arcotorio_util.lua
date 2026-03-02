@@ -58,37 +58,8 @@ function arcotorio_util.modify_ingredients(recipe, item1, item2, scale, improve)
 end
 
 local function return_item(name)
-    local categories = {
-        "item",
-        "tool",
-        "gun",
-        "ammo",
-        "armor",
-        "rail-planner",
-        "locomotive",
-        "cargo-wagon",
-        "car",
-        "fluid-wagon",
-        "active-defense-equipment",
-        "battery-equipment",
-        "belt-immunity-equipment",
-        "energy-shield-equipment",
-        "generator-equipment",
-        "movement-bonus-equipment",
-        "night-vision-equipment",
-        "roboport-equipment",
-        "solar-panel-equipment",
-        "capsule",
-        "module",
-        "artillery-wagon",
-        "spidertron-remote",
-        "spider-vehicle",
-        "repair-tool",
-        "item-with-tags",
-        "fluid"
-    }
-    for _, category in pairs(categories) do
-        if data.raw[category][name] then return data.raw[category][name] end
+    for category in pairs(defines.prototypes.item) do
+        if data.raw[category] and data.raw[category][name] then return data.raw[category][name] end
     end
     return nil
 end
