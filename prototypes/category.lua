@@ -50,3 +50,12 @@ data:extend({
         name = "mcarco"
     }
 })
+
+if not data.raw["recipe-category"]["handcrafting"] then
+    data:extend({
+        {
+            type = "recipe-category",
+            name = "handcrafting"
+        }
+    })
+end

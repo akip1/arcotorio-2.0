@@ -21,7 +21,7 @@ local hand_bead = {
     type = "recipe",
     name = "hand-Arco-bead",
     subgroup = "hand-Arco-bead-arcofolding",
-    category = "crafting",
+    category = "handcrafting",
     results = {{type = "item", name = "Arco-bead", amount = 10}},
     energy_required = 10,
     enabled = false,
@@ -149,7 +149,7 @@ local folds = {
         },
         results = {{type = "item", name = "Paper-Arco-bead", amount = 1}},
         seconds = 1,
-        category = "crafting",
+        category = "handcrafting",
         localised_name = {"recipe-name.hand-Paper-Arco-bead"},
         name = "hand-Paper-Arco-bead",
         subgroup = "hand-Arco-bead-arcofolding"
@@ -160,7 +160,7 @@ local folds = {
         },
         results = {{type = "item", name = "Rock-Arco-bead", amount = 1}},
         seconds = 1,
-        category = "crafting",
+        category = "handcrafting",
         localised_name = {"recipe-name.hand-Rock-Arco-bead"},
         name = "hand-Rock-Arco-bead",
         subgroup = "hand-Arco-bead-arcofolding"
@@ -171,7 +171,7 @@ local folds = {
         },
         results = {{type = "item", name = "Scissors-Arco-bead", amount = 1}},
         seconds = 1,
-        category = "crafting",
+        category = "handcrafting",
         localised_name = {"recipe-name.hand-Scissors-Arco-bead"},
         name = "hand-Scissors-Arco-bead",
         subgroup = "hand-Arco-bead-arcofolding"
@@ -266,7 +266,7 @@ local folds = {
         icon_size = 64,
         tint = {0.5,0.5,0},
         subgroup = "hand-Arco-bead-arcofolding",
-        category = "crafting",
+        category = "handcrafting",
         order = "a[Arco-bead]"
     },
     {
