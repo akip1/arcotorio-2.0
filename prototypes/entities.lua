@@ -42,218 +42,220 @@ data:extend({
             insufficient_input = {r = 1, g = 1, b = 0, a = 1},
             idle = {1, 0, 1, 1}
         },
-        working_visualisations = {
-            {
-                --draw_as_light = true,
-                apply_tint = "status",
-                animation = {
-                    filename = "__arcotorio__/graphics/arcofolder/arcofolder-primary.png",
-                    height = 80,
-                    width = 90,
-                    scale = 1,
-                    animation_speed = 0.5,
-                    frame_count = 30,
-                    line_length = 5,
-                    shift = {x = 0 / 64, y = -2 / 64},
-                    hr_version = {
-                        filename = "__arcotorio__/graphics/arcofolder/hr-arcofolder-primary.png",
-                        height = 159,
-                        width = 180,
-                        scale = 0.5,
-                        animation_speed = 0.5,
-                        frame_count = 30,
-                        line_length = 5,
-                        shift = {x = 0 / 64, y = -3.5 / 64},
-                    }
-                }
-            },
-            {
-                draw_as_light = true,
-                apply_recipe_tint = "primary",
-                animation = {
-                    filename = "__arcotorio__/graphics/arcofolder/arcofolder-primary.png",
-                    height = 80,
-                    width = 90,
-                    scale = 1,
-                    animation_speed = 0.5,
-                    frame_count = 30,
-                    line_length = 5,
-                    shift = {x = 0 / 64, y = -2 / 64},
-                    hr_version = {
-                        filename = "__arcotorio__/graphics/arcofolder/hr-arcofolder-primary.png",
-                        height = 159,
-                        width = 180,
-                        scale = 0.5,
-                        animation_speed = 0.5,
-                        frame_count = 30,
-                        line_length = 5,
-                        shift = {x = 0 / 64, y = -3.5 / 64},
-                    }
-                }
-            },
-            {
-                draw_as_light = true,
-                apply_recipe_tint = "secondary",
-                animation = {
-                    filename = "__arcotorio__/graphics/arcofolder/arcofolder-secondary.png",
-                    height = 56,
-                    width = 78,
-                    scale = 1,
-                    animation_speed = 0.5,
-                    frame_count = 30,
-                    line_length = 5,
-                    shift = {x = 0 / 64, y = -20 / 32},
-                    hr_version = {
-                        filename = "__arcotorio__/graphics/arcofolder/hr-arcofolder-secondary.png",
-                        height = 111,
-                        width = 154,
-                        scale = 0.5,
-                        animation_speed = 0.5,
-                        frame_count = 30,
-                        line_length = 5,
-                        shift = {x = 0 / 64, y = -39.5 / 64},
-                    }
-                }
-            },
-            {
-                draw_as_light = true,
-                apply_recipe_tint = "tertiary",
-                animation = {
-                    filename = "__arcotorio__/graphics/arcofolder/arcofolder-tertiary.png",
-                    height = 72,
-                    width = 59,
-                    scale = 1,
-                    animation_speed = 0.5,
-                    frame_count = 30,
-                    line_length = 6,
-                    shift = {x = -8.5 / 32, y = 2 / 32},
-                    hr_version = {
-                        filename = "__arcotorio__/graphics/arcofolder/hr-arcofolder-tertiary.png",
-                        height = 144,
-                        width = 117,
-                        scale = 0.5,
-                        animation_speed = 0.5,
-                        frame_count = 30,
-                        line_length = 6,
-                        shift = {x = -17.5 / 64, y = 4 / 64},
-                    }
-                }
-            },
-            {
-                draw_as_light = true,
-                apply_recipe_tint = "quaternary",
-                animation = {
-                    filename = "__arcotorio__/graphics/arcofolder/arcofolder-quaternary.png",
-                    height = 31,
-                    width = 26,
-                    scale = 1,
-                    animation_speed = 0.5,
-                    frame_count = 30,
-                    line_length = 6,
-                    shift = {x = 8 / 32, y = -18.5 / 32},
-                    hr_version = {
-                        filename = "__arcotorio__/graphics/arcofolder/hr-arcofolder-quaternary.png",
-                        height = 64,
-                        width = 49,
-                        scale = 0.5,
-                        animation_speed = 0.5,
-                        frame_count = 30,
-                        line_length = 6,
-                        shift = {x = 15.5 / 64, y = -36 / 64},
-                    }
-                }
-            },
-        },
-        animation = {
-            layers = {
+        graphics_set = {
+            working_visualisations = {
                 {
-                    filename = "__arcotorio__/graphics/arcofolder/arcofolder.png",
-                    height = 98,
-                    width = 97,
-                    scale = 1,
-                    animation_speed = 0.5,
-                    frame_count = 30,
-                    line_length = 6,
-                    shift = {x = 0 / 64, y = 0 / 64},
-                    hr_version = {
-                        filename = "__arcotorio__/graphics/arcofolder/hr-arcofolder.png",
-                        height = 196,
-                        width = 194,
-                        scale = 0.5,
+                    --draw_as_light = true,
+                    apply_tint = "status",
+                    animation = {
+                        filename = "__arcotorio__/graphics/arcofolder/arcofolder-primary.png",
+                        height = 80,
+                        width = 90,
+                        scale = 1,
+                        animation_speed = 0.5,
+                        frame_count = 30,
+                        line_length = 5,
+                        shift = {x = 0 / 64, y = -2 / 64},
+                        hr_version = {
+                            filename = "__arcotorio__/graphics/arcofolder/hr-arcofolder-primary.png",
+                            height = 159,
+                            width = 180,
+                            scale = 0.5,
+                            animation_speed = 0.5,
+                            frame_count = 30,
+                            line_length = 5,
+                            shift = {x = 0 / 64, y = -3.5 / 64},
+                        }
+                    }
+                },
+                {
+                    draw_as_light = true,
+                    apply_recipe_tint = "primary",
+                    animation = {
+                        filename = "__arcotorio__/graphics/arcofolder/arcofolder-primary.png",
+                        height = 80,
+                        width = 90,
+                        scale = 1,
+                        animation_speed = 0.5,
+                        frame_count = 30,
+                        line_length = 5,
+                        shift = {x = 0 / 64, y = -2 / 64},
+                        hr_version = {
+                            filename = "__arcotorio__/graphics/arcofolder/hr-arcofolder-primary.png",
+                            height = 159,
+                            width = 180,
+                            scale = 0.5,
+                            animation_speed = 0.5,
+                            frame_count = 30,
+                            line_length = 5,
+                            shift = {x = 0 / 64, y = -3.5 / 64},
+                        }
+                    }
+                },
+                {
+                    draw_as_light = true,
+                    apply_recipe_tint = "secondary",
+                    animation = {
+                        filename = "__arcotorio__/graphics/arcofolder/arcofolder-secondary.png",
+                        height = 56,
+                        width = 78,
+                        scale = 1,
+                        animation_speed = 0.5,
+                        frame_count = 30,
+                        line_length = 5,
+                        shift = {x = 0 / 64, y = -20 / 32},
+                        hr_version = {
+                            filename = "__arcotorio__/graphics/arcofolder/hr-arcofolder-secondary.png",
+                            height = 111,
+                            width = 154,
+                            scale = 0.5,
+                            animation_speed = 0.5,
+                            frame_count = 30,
+                            line_length = 5,
+                            shift = {x = 0 / 64, y = -39.5 / 64},
+                        }
+                    }
+                },
+                {
+                    draw_as_light = true,
+                    apply_recipe_tint = "tertiary",
+                    animation = {
+                        filename = "__arcotorio__/graphics/arcofolder/arcofolder-tertiary.png",
+                        height = 72,
+                        width = 59,
+                        scale = 1,
+                        animation_speed = 0.5,
+                        frame_count = 30,
+                        line_length = 6,
+                        shift = {x = -8.5 / 32, y = 2 / 32},
+                        hr_version = {
+                            filename = "__arcotorio__/graphics/arcofolder/hr-arcofolder-tertiary.png",
+                            height = 144,
+                            width = 117,
+                            scale = 0.5,
+                            animation_speed = 0.5,
+                            frame_count = 30,
+                            line_length = 6,
+                            shift = {x = -17.5 / 64, y = 4 / 64},
+                        }
+                    }
+                },
+                {
+                    draw_as_light = true,
+                    apply_recipe_tint = "quaternary",
+                    animation = {
+                        filename = "__arcotorio__/graphics/arcofolder/arcofolder-quaternary.png",
+                        height = 31,
+                        width = 26,
+                        scale = 1,
+                        animation_speed = 0.5,
+                        frame_count = 30,
+                        line_length = 6,
+                        shift = {x = 8 / 32, y = -18.5 / 32},
+                        hr_version = {
+                            filename = "__arcotorio__/graphics/arcofolder/hr-arcofolder-quaternary.png",
+                            height = 64,
+                            width = 49,
+                            scale = 0.5,
+                            animation_speed = 0.5,
+                            frame_count = 30,
+                            line_length = 6,
+                            shift = {x = 15.5 / 64, y = -36 / 64},
+                        }
+                    }
+                },
+            },
+            animation = {
+                layers = {
+                    {
+                        filename = "__arcotorio__/graphics/arcofolder/arcofolder.png",
+                        height = 98,
+                        width = 97,
+                        scale = 1,
                         animation_speed = 0.5,
                         frame_count = 30,
                         line_length = 6,
                         shift = {x = 0 / 64, y = 0 / 64},
-                    }
-                },
-                {
-                    filename = "__arcotorio__/graphics/arcofolder/arcofolder-shadow.png",
-                    height = 73,
-                    width = 108,
-                    scale = 1,
-                    animation_speed = 0.5,
-                    frame_count = 1,
-                    repeat_count = 30,
-                    draw_as_shadow = true,
-                    shift = {x = 10 / 64, y = 29 / 64},
-                    hr_version = {
-                        filename = "__arcotorio__/graphics/arcofolder/hr-arcofolder-shadow.png",
-                        height = 145,
-                        width = 215,
-                        scale = 0.5,
+                        hr_version = {
+                            filename = "__arcotorio__/graphics/arcofolder/hr-arcofolder.png",
+                            height = 196,
+                            width = 194,
+                            scale = 0.5,
+                            animation_speed = 0.5,
+                            frame_count = 30,
+                            line_length = 6,
+                            shift = {x = 0 / 64, y = 0 / 64},
+                        }
+                    },
+                    {
+                        filename = "__arcotorio__/graphics/arcofolder/arcofolder-shadow.png",
+                        height = 73,
+                        width = 108,
+                        scale = 1,
                         animation_speed = 0.5,
                         frame_count = 1,
                         repeat_count = 30,
                         draw_as_shadow = true,
-                        shift = {x = 10 / 64, y = 29 / 64}
+                        shift = {x = 10 / 64, y = 29 / 64},
+                        hr_version = {
+                            filename = "__arcotorio__/graphics/arcofolder/hr-arcofolder-shadow.png",
+                            height = 145,
+                            width = 215,
+                            scale = 0.5,
+                            animation_speed = 0.5,
+                            frame_count = 1,
+                            repeat_count = 30,
+                            draw_as_shadow = true,
+                            shift = {x = 10 / 64, y = 29 / 64}
+                        }
                     }
                 }
-            }
+            },
+            --[[ idle_animation = {
+                layers = {
+                    {
+                        filename = "__arcotorio__/graphics/arcofolder/arcofolder-idle.png",
+                        height = 98,
+                        width = 98,
+                        scale = 1,
+                        animation_speed = 0.5,
+                        frame_count = 1,
+                        repeat_count = 30,
+                        hr_version = {
+                            filename = "__arcotorio__/graphics/arcofolder/hr-arcofolder-idle.png",
+                            height = 196,
+                            width = 196,
+                            scale = 0.5,
+                            animation_speed = 0.5,
+                            frame_count = 1,
+                            repeat_count = 30,
+                        }
+                    },
+                    {
+                        filename = "__arcotorio__/graphics/arcofolder/arcofolder-shadow.png",
+                        height = 73,
+                        width = 108,
+                        scale = 1,
+                        animation_speed = 0.5,
+                        frame_count = 1,
+                        repeat_count = 30,
+                        draw_as_shadow = true,
+                        shift = {x = 10 / 64, y = 29 / 64},
+                        hr_version = {
+                            filename = "__arcotorio__/graphics/arcofolder/hr-arcofolder-shadow.png",
+                            height = 145,
+                            width = 215,
+                            scale = 0.5,
+                            animation_speed = 0.5,
+                            frame_count = 1,
+                            repeat_count = 30,
+                            draw_as_shadow = true,
+                            shift = {x = 10 / 64, y = 29 / 64}
+                        }
+                    }
+                }
+            }, ]]
         },
-        --[[ idle_animation = {
-            layers = {
-                {
-                    filename = "__arcotorio__/graphics/arcofolder/arcofolder-idle.png",
-                    height = 98,
-                    width = 98,
-                    scale = 1,
-                    animation_speed = 0.5,
-                    frame_count = 1,
-                    repeat_count = 30,
-                    hr_version = {
-                        filename = "__arcotorio__/graphics/arcofolder/hr-arcofolder-idle.png",
-                        height = 196,
-                        width = 196,
-                        scale = 0.5,
-                        animation_speed = 0.5,
-                        frame_count = 1,
-                        repeat_count = 30,
-                    }
-                },
-                {
-                    filename = "__arcotorio__/graphics/arcofolder/arcofolder-shadow.png",
-                    height = 73,
-                    width = 108,
-                    scale = 1,
-                    animation_speed = 0.5,
-                    frame_count = 1,
-                    repeat_count = 30,
-                    draw_as_shadow = true,
-                    shift = {x = 10 / 64, y = 29 / 64},
-                    hr_version = {
-                        filename = "__arcotorio__/graphics/arcofolder/hr-arcofolder-shadow.png",
-                        height = 145,
-                        width = 215,
-                        scale = 0.5,
-                        animation_speed = 0.5,
-                        frame_count = 1,
-                        repeat_count = 30,
-                        draw_as_shadow = true,
-                        shift = {x = 10 / 64, y = 29 / 64}
-                    }
-                }
-            }
-        }, ]]
         allowed_effects = {"consumption", "speed", "pollution"},
     }--[[@as data.AssemblingMachinePrototype]],
     {
@@ -296,224 +298,226 @@ data:extend({
         module_specification = {
             module_slots = 2
         },
-        status_colors = {
-            insufficient_input = {r = 1, g = 1, b = 0, a = 1},
-            idle = {1, 0, 1, 1}
-        },
-        working_visualisations = {
-            {
-                --draw_as_light = true,
-                apply_tint = "status",
-                animation = {
-                    filename = "__arcotorio__/graphics/arcofolder/arcofolder-primary.png",
-                    height = 80,
-                    width = 90,
-                    scale = 1,
-                    animation_speed = 0.5,
-                    frame_count = 30,
-                    line_length = 5,
-                    shift = {x = 0 / 64, y = -2 / 64},
-                    hr_version = {
-                        filename = "__arcotorio__/graphics/arcofolder/hr-arcofolder-primary.png",
-                        height = 159,
-                        width = 180,
-                        scale = 0.5,
-                        animation_speed = 0.5,
-                        frame_count = 30,
-                        line_length = 5,
-                        shift = {x = 0 / 64, y = -3.5 / 64},
-                    }
-                }
+        graphics_set = {
+            status_colors = {
+                insufficient_input = {r = 1, g = 1, b = 0, a = 1},
+                idle = {1, 0, 1, 1}
             },
-            {
-                draw_as_light = true,
-                apply_recipe_tint = "primary",
-                animation = {
-                    filename = "__arcotorio__/graphics/arcofolder/arcofolder-primary.png",
-                    height = 80,
-                    width = 90,
-                    scale = 1,
-                    animation_speed = 0.5,
-                    frame_count = 30,
-                    line_length = 5,
-                    shift = {x = 0 / 64, y = -2 / 64},
-                    hr_version = {
-                        filename = "__arcotorio__/graphics/arcofolder/hr-arcofolder-primary.png",
-                        height = 159,
-                        width = 180,
-                        scale = 0.5,
-                        animation_speed = 0.5,
-                        frame_count = 30,
-                        line_length = 5,
-                        shift = {x = 0 / 64, y = -3.5 / 64},
-                    }
-                }
-            },
-            {
-                draw_as_light = true,
-                apply_recipe_tint = "secondary",
-                animation = {
-                    filename = "__arcotorio__/graphics/arcofolder/arcofolder-secondary.png",
-                    height = 56,
-                    width = 78,
-                    scale = 1,
-                    animation_speed = 0.5,
-                    frame_count = 30,
-                    line_length = 5,
-                    shift = {x = 0 / 64, y = -20 / 32},
-                    hr_version = {
-                        filename = "__arcotorio__/graphics/arcofolder/hr-arcofolder-secondary.png",
-                        height = 111,
-                        width = 154,
-                        scale = 0.5,
-                        animation_speed = 0.5,
-                        frame_count = 30,
-                        line_length = 5,
-                        shift = {x = 0 / 64, y = -39.5 / 64},
-                    }
-                }
-            },
-            {
-                draw_as_light = true,
-                apply_recipe_tint = "tertiary",
-                animation = {
-                    filename = "__arcotorio__/graphics/arcofolder/arcofolder-tertiary.png",
-                    height = 72,
-                    width = 59,
-                    scale = 1,
-                    animation_speed = 0.5,
-                    frame_count = 30,
-                    line_length = 6,
-                    shift = {x = -8.5 / 32, y = 2 / 32},
-                    hr_version = {
-                        filename = "__arcotorio__/graphics/arcofolder/hr-arcofolder-tertiary.png",
-                        height = 144,
-                        width = 117,
-                        scale = 0.5,
-                        animation_speed = 0.5,
-                        frame_count = 30,
-                        line_length = 6,
-                        shift = {x = -17.5 / 64, y = 4 / 64},
-                    }
-                }
-            },
-            {
-                draw_as_light = true,
-                apply_recipe_tint = "quaternary",
-                animation = {
-                    filename = "__arcotorio__/graphics/arcofolder/arcofolder-quaternary.png",
-                    height = 31,
-                    width = 26,
-                    scale = 1,
-                    animation_speed = 0.5,
-                    frame_count = 30,
-                    line_length = 6,
-                    shift = {x = 8 / 32, y = -18.5 / 32},
-                    hr_version = {
-                        filename = "__arcotorio__/graphics/arcofolder/hr-arcofolder-quaternary.png",
-                        height = 64,
-                        width = 49,
-                        scale = 0.5,
-                        animation_speed = 0.5,
-                        frame_count = 30,
-                        line_length = 6,
-                        shift = {x = 15.5 / 64, y = -36 / 64},
-                    }
-                }
-            },
-        },
-        animation = {
-            layers = {
+            working_visualisations = {
                 {
-                    tint = {0, 1, 0},
-                    filename = "__arcotorio__/graphics/arcofolder/arcofolder.png",
-                    height = 98,
-                    width = 97,
-                    scale = 1,
-                    animation_speed = 0.5,
-                    frame_count = 30,
-                    line_length = 6,
-                    shift = {x = 0 / 64, y = 0 / 64},
-                    hr_version = {
+                    --draw_as_light = true,
+                    apply_tint = "status",
+                    animation = {
+                        filename = "__arcotorio__/graphics/arcofolder/arcofolder-primary.png",
+                        height = 80,
+                        width = 90,
+                        scale = 1,
+                        animation_speed = 0.5,
+                        frame_count = 30,
+                        line_length = 5,
+                        shift = {x = 0 / 64, y = -2 / 64},
+                        hr_version = {
+                            filename = "__arcotorio__/graphics/arcofolder/hr-arcofolder-primary.png",
+                            height = 159,
+                            width = 180,
+                            scale = 0.5,
+                            animation_speed = 0.5,
+                            frame_count = 30,
+                            line_length = 5,
+                            shift = {x = 0 / 64, y = -3.5 / 64},
+                        }
+                    }
+                },
+                {
+                    draw_as_light = true,
+                    apply_recipe_tint = "primary",
+                    animation = {
+                        filename = "__arcotorio__/graphics/arcofolder/arcofolder-primary.png",
+                        height = 80,
+                        width = 90,
+                        scale = 1,
+                        animation_speed = 0.5,
+                        frame_count = 30,
+                        line_length = 5,
+                        shift = {x = 0 / 64, y = -2 / 64},
+                        hr_version = {
+                            filename = "__arcotorio__/graphics/arcofolder/hr-arcofolder-primary.png",
+                            height = 159,
+                            width = 180,
+                            scale = 0.5,
+                            animation_speed = 0.5,
+                            frame_count = 30,
+                            line_length = 5,
+                            shift = {x = 0 / 64, y = -3.5 / 64},
+                        }
+                    }
+                },
+                {
+                    draw_as_light = true,
+                    apply_recipe_tint = "secondary",
+                    animation = {
+                        filename = "__arcotorio__/graphics/arcofolder/arcofolder-secondary.png",
+                        height = 56,
+                        width = 78,
+                        scale = 1,
+                        animation_speed = 0.5,
+                        frame_count = 30,
+                        line_length = 5,
+                        shift = {x = 0 / 64, y = -20 / 32},
+                        hr_version = {
+                            filename = "__arcotorio__/graphics/arcofolder/hr-arcofolder-secondary.png",
+                            height = 111,
+                            width = 154,
+                            scale = 0.5,
+                            animation_speed = 0.5,
+                            frame_count = 30,
+                            line_length = 5,
+                            shift = {x = 0 / 64, y = -39.5 / 64},
+                        }
+                    }
+                },
+                {
+                    draw_as_light = true,
+                    apply_recipe_tint = "tertiary",
+                    animation = {
+                        filename = "__arcotorio__/graphics/arcofolder/arcofolder-tertiary.png",
+                        height = 72,
+                        width = 59,
+                        scale = 1,
+                        animation_speed = 0.5,
+                        frame_count = 30,
+                        line_length = 6,
+                        shift = {x = -8.5 / 32, y = 2 / 32},
+                        hr_version = {
+                            filename = "__arcotorio__/graphics/arcofolder/hr-arcofolder-tertiary.png",
+                            height = 144,
+                            width = 117,
+                            scale = 0.5,
+                            animation_speed = 0.5,
+                            frame_count = 30,
+                            line_length = 6,
+                            shift = {x = -17.5 / 64, y = 4 / 64},
+                        }
+                    }
+                },
+                {
+                    draw_as_light = true,
+                    apply_recipe_tint = "quaternary",
+                    animation = {
+                        filename = "__arcotorio__/graphics/arcofolder/arcofolder-quaternary.png",
+                        height = 31,
+                        width = 26,
+                        scale = 1,
+                        animation_speed = 0.5,
+                        frame_count = 30,
+                        line_length = 6,
+                        shift = {x = 8 / 32, y = -18.5 / 32},
+                        hr_version = {
+                            filename = "__arcotorio__/graphics/arcofolder/hr-arcofolder-quaternary.png",
+                            height = 64,
+                            width = 49,
+                            scale = 0.5,
+                            animation_speed = 0.5,
+                            frame_count = 30,
+                            line_length = 6,
+                            shift = {x = 15.5 / 64, y = -36 / 64},
+                        }
+                    }
+                },
+            },
+            animation = {
+                layers = {
+                    {
                         tint = {0, 1, 0},
-                        filename = "__arcotorio__/graphics/arcofolder/hr-arcofolder.png",
-                        height = 196,
-                        width = 194,
-                        scale = 0.5,
+                        filename = "__arcotorio__/graphics/arcofolder/arcofolder.png",
+                        height = 98,
+                        width = 97,
+                        scale = 1,
                         animation_speed = 0.5,
                         frame_count = 30,
                         line_length = 6,
                         shift = {x = 0 / 64, y = 0 / 64},
-                    }
-                },
-                {
-                    filename = "__arcotorio__/graphics/arcofolder/arcofolder-shadow.png",
-                    height = 73,
-                    width = 108,
-                    scale = 1,
-                    animation_speed = 0.5,
-                    frame_count = 1,
-                    repeat_count = 30,
-                    draw_as_shadow = true,
-                    shift = {x = 10 / 64, y = 29 / 64},
-                    hr_version = {
-                        filename = "__arcotorio__/graphics/arcofolder/hr-arcofolder-shadow.png",
-                        height = 145,
-                        width = 215,
-                        scale = 0.5,
+                        hr_version = {
+                            tint = {0, 1, 0},
+                            filename = "__arcotorio__/graphics/arcofolder/hr-arcofolder.png",
+                            height = 196,
+                            width = 194,
+                            scale = 0.5,
+                            animation_speed = 0.5,
+                            frame_count = 30,
+                            line_length = 6,
+                            shift = {x = 0 / 64, y = 0 / 64},
+                        }
+                    },
+                    {
+                        filename = "__arcotorio__/graphics/arcofolder/arcofolder-shadow.png",
+                        height = 73,
+                        width = 108,
+                        scale = 1,
                         animation_speed = 0.5,
                         frame_count = 1,
                         repeat_count = 30,
                         draw_as_shadow = true,
-                        shift = {x = 10 / 64, y = 29 / 64}
+                        shift = {x = 10 / 64, y = 29 / 64},
+                        hr_version = {
+                            filename = "__arcotorio__/graphics/arcofolder/hr-arcofolder-shadow.png",
+                            height = 145,
+                            width = 215,
+                            scale = 0.5,
+                            animation_speed = 0.5,
+                            frame_count = 1,
+                            repeat_count = 30,
+                            draw_as_shadow = true,
+                            shift = {x = 10 / 64, y = 29 / 64}
+                        }
                     }
                 }
-            }
+            },
+            --[[ idle_animation = {
+                layers = {
+                    {
+                        filename = "__arcotorio__/graphics/arcofolder/arcofolder-idle.png",
+                        height = 98,
+                        width = 98,
+                        scale = 1,
+                        animation_speed = 0.5,
+                        frame_count = 1,
+                        repeat_count = 30,
+                        hr_version = {
+                            filename = "__arcotorio__/graphics/arcofolder/hr-arcofolder-idle.png",
+                            height = 196,
+                            width = 196,
+                            scale = 0.5,
+                            animation_speed = 0.5,
+                            frame_count = 1,
+                            repeat_count = 30,
+                        }
+                    },
+                    {
+                        filename = "__arcotorio__/graphics/arcofolder/arcofolder-shadow.png",
+                        height = 73,
+                        width = 108,
+                        scale = 1,
+                        animation_speed = 0.5,
+                        frame_count = 1,
+                        repeat_count = 30,
+                        draw_as_shadow = true,
+                        shift = {x = 10 / 64, y = 29 / 64},
+                        hr_version = {
+                            filename = "__arcotorio__/graphics/arcofolder/hr-arcofolder-shadow.png",
+                            height = 145,
+                            width = 215,
+                            scale = 0.5,
+                            animation_speed = 0.5,
+                            frame_count = 1,
+                            repeat_count = 30,
+                            draw_as_shadow = true,
+                            shift = {x = 10 / 64, y = 29 / 64}
+                        }
+                    }
+                }
+            }, ]]
         },
-        --[[ idle_animation = {
-            layers = {
-                {
-                    filename = "__arcotorio__/graphics/arcofolder/arcofolder-idle.png",
-                    height = 98,
-                    width = 98,
-                    scale = 1,
-                    animation_speed = 0.5,
-                    frame_count = 1,
-                    repeat_count = 30,
-                    hr_version = {
-                        filename = "__arcotorio__/graphics/arcofolder/hr-arcofolder-idle.png",
-                        height = 196,
-                        width = 196,
-                        scale = 0.5,
-                        animation_speed = 0.5,
-                        frame_count = 1,
-                        repeat_count = 30,
-                    }
-                },
-                {
-                    filename = "__arcotorio__/graphics/arcofolder/arcofolder-shadow.png",
-                    height = 73,
-                    width = 108,
-                    scale = 1,
-                    animation_speed = 0.5,
-                    frame_count = 1,
-                    repeat_count = 30,
-                    draw_as_shadow = true,
-                    shift = {x = 10 / 64, y = 29 / 64},
-                    hr_version = {
-                        filename = "__arcotorio__/graphics/arcofolder/hr-arcofolder-shadow.png",
-                        height = 145,
-                        width = 215,
-                        scale = 0.5,
-                        animation_speed = 0.5,
-                        frame_count = 1,
-                        repeat_count = 30,
-                        draw_as_shadow = true,
-                        shift = {x = 10 / 64, y = 29 / 64}
-                    }
-                }
-            }
-        }, ]]
         allowed_effects = {"consumption", "speed", "pollution"},
     }--[[@as data.AssemblingMachinePrototype]],
     {
@@ -556,224 +560,226 @@ data:extend({
         module_specification = {
             module_slots = 3
         },
-        status_colors = {
-            insufficient_input = {r = 1, g = 1, b = 0, a = 1},
-            idle = {1, 0, 1, 1}
-        },
-        working_visualisations = {
-            {
-                --draw_as_light = true,
-                apply_tint = "status",
-                animation = {
-                    filename = "__arcotorio__/graphics/arcofolder/arcofolder-primary.png",
-                    height = 80,
-                    width = 90,
-                    scale = 1,
-                    animation_speed = 0.5,
-                    frame_count = 30,
-                    line_length = 5,
-                    shift = {x = 0 / 64, y = -2 / 64},
-                    hr_version = {
-                        filename = "__arcotorio__/graphics/arcofolder/hr-arcofolder-primary.png",
-                        height = 159,
-                        width = 180,
-                        scale = 0.5,
-                        animation_speed = 0.5,
-                        frame_count = 30,
-                        line_length = 5,
-                        shift = {x = 0 / 64, y = -3.5 / 64},
-                    }
-                }
+        graphics_set = {
+            status_colors = {
+                insufficient_input = {r = 1, g = 1, b = 0, a = 1},
+                idle = {1, 0, 1, 1}
             },
-            {
-                draw_as_light = true,
-                apply_recipe_tint = "primary",
-                animation = {
-                    filename = "__arcotorio__/graphics/arcofolder/arcofolder-primary.png",
-                    height = 80,
-                    width = 90,
-                    scale = 1,
-                    animation_speed = 0.5,
-                    frame_count = 30,
-                    line_length = 5,
-                    shift = {x = 0 / 64, y = -2 / 64},
-                    hr_version = {
-                        filename = "__arcotorio__/graphics/arcofolder/hr-arcofolder-primary.png",
-                        height = 159,
-                        width = 180,
-                        scale = 0.5,
-                        animation_speed = 0.5,
-                        frame_count = 30,
-                        line_length = 5,
-                        shift = {x = 0 / 64, y = -3.5 / 64},
-                    }
-                }
-            },
-            {
-                draw_as_light = true,
-                apply_recipe_tint = "secondary",
-                animation = {
-                    filename = "__arcotorio__/graphics/arcofolder/arcofolder-secondary.png",
-                    height = 56,
-                    width = 78,
-                    scale = 1,
-                    animation_speed = 0.5,
-                    frame_count = 30,
-                    line_length = 5,
-                    shift = {x = 0 / 64, y = -20 / 32},
-                    hr_version = {
-                        filename = "__arcotorio__/graphics/arcofolder/hr-arcofolder-secondary.png",
-                        height = 111,
-                        width = 154,
-                        scale = 0.5,
-                        animation_speed = 0.5,
-                        frame_count = 30,
-                        line_length = 5,
-                        shift = {x = 0 / 64, y = -39.5 / 64},
-                    }
-                }
-            },
-            {
-                draw_as_light = true,
-                apply_recipe_tint = "tertiary",
-                animation = {
-                    filename = "__arcotorio__/graphics/arcofolder/arcofolder-tertiary.png",
-                    height = 72,
-                    width = 59,
-                    scale = 1,
-                    animation_speed = 0.5,
-                    frame_count = 30,
-                    line_length = 6,
-                    shift = {x = -8.5 / 32, y = 2 / 32},
-                    hr_version = {
-                        filename = "__arcotorio__/graphics/arcofolder/hr-arcofolder-tertiary.png",
-                        height = 144,
-                        width = 117,
-                        scale = 0.5,
-                        animation_speed = 0.5,
-                        frame_count = 30,
-                        line_length = 6,
-                        shift = {x = -17.5 / 64, y = 4 / 64},
-                    }
-                }
-            },
-            {
-                draw_as_light = true,
-                apply_recipe_tint = "quaternary",
-                animation = {
-                    filename = "__arcotorio__/graphics/arcofolder/arcofolder-quaternary.png",
-                    height = 31,
-                    width = 26,
-                    scale = 1,
-                    animation_speed = 0.5,
-                    frame_count = 30,
-                    line_length = 6,
-                    shift = {x = 8 / 32, y = -18.5 / 32},
-                    hr_version = {
-                        filename = "__arcotorio__/graphics/arcofolder/hr-arcofolder-quaternary.png",
-                        height = 64,
-                        width = 49,
-                        scale = 0.5,
-                        animation_speed = 0.5,
-                        frame_count = 30,
-                        line_length = 6,
-                        shift = {x = 15.5 / 64, y = -36 / 64},
-                    }
-                }
-            },
-        },
-        animation = {
-            layers = {
+            working_visualisations = {
                 {
-                    tint = {1, 0, 1},
-                    filename = "__arcotorio__/graphics/arcofolder/arcofolder.png",
-                    height = 98,
-                    width = 97,
-                    scale = 1,
-                    animation_speed = 0.5,
-                    frame_count = 30,
-                    line_length = 6,
-                    shift = {x = 0 / 64, y = 0 / 64},
-                    hr_version = {
+                    --draw_as_light = true,
+                    apply_tint = "status",
+                    animation = {
+                        filename = "__arcotorio__/graphics/arcofolder/arcofolder-primary.png",
+                        height = 80,
+                        width = 90,
+                        scale = 1,
+                        animation_speed = 0.5,
+                        frame_count = 30,
+                        line_length = 5,
+                        shift = {x = 0 / 64, y = -2 / 64},
+                        hr_version = {
+                            filename = "__arcotorio__/graphics/arcofolder/hr-arcofolder-primary.png",
+                            height = 159,
+                            width = 180,
+                            scale = 0.5,
+                            animation_speed = 0.5,
+                            frame_count = 30,
+                            line_length = 5,
+                            shift = {x = 0 / 64, y = -3.5 / 64},
+                        }
+                    }
+                },
+                {
+                    draw_as_light = true,
+                    apply_recipe_tint = "primary",
+                    animation = {
+                        filename = "__arcotorio__/graphics/arcofolder/arcofolder-primary.png",
+                        height = 80,
+                        width = 90,
+                        scale = 1,
+                        animation_speed = 0.5,
+                        frame_count = 30,
+                        line_length = 5,
+                        shift = {x = 0 / 64, y = -2 / 64},
+                        hr_version = {
+                            filename = "__arcotorio__/graphics/arcofolder/hr-arcofolder-primary.png",
+                            height = 159,
+                            width = 180,
+                            scale = 0.5,
+                            animation_speed = 0.5,
+                            frame_count = 30,
+                            line_length = 5,
+                            shift = {x = 0 / 64, y = -3.5 / 64},
+                        }
+                    }
+                },
+                {
+                    draw_as_light = true,
+                    apply_recipe_tint = "secondary",
+                    animation = {
+                        filename = "__arcotorio__/graphics/arcofolder/arcofolder-secondary.png",
+                        height = 56,
+                        width = 78,
+                        scale = 1,
+                        animation_speed = 0.5,
+                        frame_count = 30,
+                        line_length = 5,
+                        shift = {x = 0 / 64, y = -20 / 32},
+                        hr_version = {
+                            filename = "__arcotorio__/graphics/arcofolder/hr-arcofolder-secondary.png",
+                            height = 111,
+                            width = 154,
+                            scale = 0.5,
+                            animation_speed = 0.5,
+                            frame_count = 30,
+                            line_length = 5,
+                            shift = {x = 0 / 64, y = -39.5 / 64},
+                        }
+                    }
+                },
+                {
+                    draw_as_light = true,
+                    apply_recipe_tint = "tertiary",
+                    animation = {
+                        filename = "__arcotorio__/graphics/arcofolder/arcofolder-tertiary.png",
+                        height = 72,
+                        width = 59,
+                        scale = 1,
+                        animation_speed = 0.5,
+                        frame_count = 30,
+                        line_length = 6,
+                        shift = {x = -8.5 / 32, y = 2 / 32},
+                        hr_version = {
+                            filename = "__arcotorio__/graphics/arcofolder/hr-arcofolder-tertiary.png",
+                            height = 144,
+                            width = 117,
+                            scale = 0.5,
+                            animation_speed = 0.5,
+                            frame_count = 30,
+                            line_length = 6,
+                            shift = {x = -17.5 / 64, y = 4 / 64},
+                        }
+                    }
+                },
+                {
+                    draw_as_light = true,
+                    apply_recipe_tint = "quaternary",
+                    animation = {
+                        filename = "__arcotorio__/graphics/arcofolder/arcofolder-quaternary.png",
+                        height = 31,
+                        width = 26,
+                        scale = 1,
+                        animation_speed = 0.5,
+                        frame_count = 30,
+                        line_length = 6,
+                        shift = {x = 8 / 32, y = -18.5 / 32},
+                        hr_version = {
+                            filename = "__arcotorio__/graphics/arcofolder/hr-arcofolder-quaternary.png",
+                            height = 64,
+                            width = 49,
+                            scale = 0.5,
+                            animation_speed = 0.5,
+                            frame_count = 30,
+                            line_length = 6,
+                            shift = {x = 15.5 / 64, y = -36 / 64},
+                        }
+                    }
+                },
+            },
+            animation = {
+                layers = {
+                    {
                         tint = {1, 0, 1},
-                        filename = "__arcotorio__/graphics/arcofolder/hr-arcofolder.png",
-                        height = 196,
-                        width = 194,
-                        scale = 0.5,
+                        filename = "__arcotorio__/graphics/arcofolder/arcofolder.png",
+                        height = 98,
+                        width = 97,
+                        scale = 1,
                         animation_speed = 0.5,
                         frame_count = 30,
                         line_length = 6,
                         shift = {x = 0 / 64, y = 0 / 64},
-                    }
-                },
-                {
-                    filename = "__arcotorio__/graphics/arcofolder/arcofolder-shadow.png",
-                    height = 73,
-                    width = 108,
-                    scale = 1,
-                    animation_speed = 0.5,
-                    frame_count = 1,
-                    repeat_count = 30,
-                    draw_as_shadow = true,
-                    shift = {x = 10 / 64, y = 29 / 64},
-                    hr_version = {
-                        filename = "__arcotorio__/graphics/arcofolder/hr-arcofolder-shadow.png",
-                        height = 145,
-                        width = 215,
-                        scale = 0.5,
+                        hr_version = {
+                            tint = {1, 0, 1},
+                            filename = "__arcotorio__/graphics/arcofolder/hr-arcofolder.png",
+                            height = 196,
+                            width = 194,
+                            scale = 0.5,
+                            animation_speed = 0.5,
+                            frame_count = 30,
+                            line_length = 6,
+                            shift = {x = 0 / 64, y = 0 / 64},
+                        }
+                    },
+                    {
+                        filename = "__arcotorio__/graphics/arcofolder/arcofolder-shadow.png",
+                        height = 73,
+                        width = 108,
+                        scale = 1,
                         animation_speed = 0.5,
                         frame_count = 1,
                         repeat_count = 30,
                         draw_as_shadow = true,
-                        shift = {x = 10 / 64, y = 29 / 64}
+                        shift = {x = 10 / 64, y = 29 / 64},
+                        hr_version = {
+                            filename = "__arcotorio__/graphics/arcofolder/hr-arcofolder-shadow.png",
+                            height = 145,
+                            width = 215,
+                            scale = 0.5,
+                            animation_speed = 0.5,
+                            frame_count = 1,
+                            repeat_count = 30,
+                            draw_as_shadow = true,
+                            shift = {x = 10 / 64, y = 29 / 64}
+                        }
                     }
                 }
-            }
+            },
+            --[[ idle_animation = {
+                layers = {
+                    {
+                        filename = "__arcotorio__/graphics/arcofolder/arcofolder-idle.png",
+                        height = 98,
+                        width = 98,
+                        scale = 1,
+                        animation_speed = 0.5,
+                        frame_count = 1,
+                        repeat_count = 30,
+                        hr_version = {
+                            filename = "__arcotorio__/graphics/arcofolder/hr-arcofolder-idle.png",
+                            height = 196,
+                            width = 196,
+                            scale = 0.5,
+                            animation_speed = 0.5,
+                            frame_count = 1,
+                            repeat_count = 30,
+                        }
+                    },
+                    {
+                        filename = "__arcotorio__/graphics/arcofolder/arcofolder-shadow.png",
+                        height = 73,
+                        width = 108,
+                        scale = 1,
+                        animation_speed = 0.5,
+                        frame_count = 1,
+                        repeat_count = 30,
+                        draw_as_shadow = true,
+                        shift = {x = 10 / 64, y = 29 / 64},
+                        hr_version = {
+                            filename = "__arcotorio__/graphics/arcofolder/hr-arcofolder-shadow.png",
+                            height = 145,
+                            width = 215,
+                            scale = 0.5,
+                            animation_speed = 0.5,
+                            frame_count = 1,
+                            repeat_count = 30,
+                            draw_as_shadow = true,
+                            shift = {x = 10 / 64, y = 29 / 64}
+                        }
+                    }
+                }
+            }, ]]
         },
-        --[[ idle_animation = {
-            layers = {
-                {
-                    filename = "__arcotorio__/graphics/arcofolder/arcofolder-idle.png",
-                    height = 98,
-                    width = 98,
-                    scale = 1,
-                    animation_speed = 0.5,
-                    frame_count = 1,
-                    repeat_count = 30,
-                    hr_version = {
-                        filename = "__arcotorio__/graphics/arcofolder/hr-arcofolder-idle.png",
-                        height = 196,
-                        width = 196,
-                        scale = 0.5,
-                        animation_speed = 0.5,
-                        frame_count = 1,
-                        repeat_count = 30,
-                    }
-                },
-                {
-                    filename = "__arcotorio__/graphics/arcofolder/arcofolder-shadow.png",
-                    height = 73,
-                    width = 108,
-                    scale = 1,
-                    animation_speed = 0.5,
-                    frame_count = 1,
-                    repeat_count = 30,
-                    draw_as_shadow = true,
-                    shift = {x = 10 / 64, y = 29 / 64},
-                    hr_version = {
-                        filename = "__arcotorio__/graphics/arcofolder/hr-arcofolder-shadow.png",
-                        height = 145,
-                        width = 215,
-                        scale = 0.5,
-                        animation_speed = 0.5,
-                        frame_count = 1,
-                        repeat_count = 30,
-                        draw_as_shadow = true,
-                        shift = {x = 10 / 64, y = 29 / 64}
-                    }
-                }
-            }
-        }, ]]
         allowed_effects = {"consumption", "speed", "pollution"},
     }--[[@as data.AssemblingMachinePrototype]]
 })
