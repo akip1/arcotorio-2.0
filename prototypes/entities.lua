@@ -46,10 +46,10 @@ data:extend({
         circuit_connector = circuit_connector_definitions.create_vector(
             universal_connector_template,
             {
-                { variation = 35, main_offset = util.by_pixel( 30.625,  27.625), shadow_offset = util.by_pixel( 30.625,  27.625), show_shadow = true },
-                { variation = 35, main_offset = util.by_pixel( 30.625,  27.625), shadow_offset = util.by_pixel( 30.625,  27.625), show_shadow = true },
-                { variation = 35, main_offset = util.by_pixel( 30.625,  27.625), shadow_offset = util.by_pixel( 30.625,  27.625), show_shadow = true },
-                { variation = 35, main_offset = util.by_pixel( 30.625,  27.625), shadow_offset = util.by_pixel( 30.625,  27.625), show_shadow = true }
+                { variation = 19, main_offset = util.by_pixel( 27.5,  3), shadow_offset = util.by_pixel( 27.5,  3), show_shadow = true },
+                { variation = 19, main_offset = util.by_pixel( 27.5,  3), shadow_offset = util.by_pixel( 27.5,  3), show_shadow = true },
+                { variation = 19, main_offset = util.by_pixel( 27.5,  3), shadow_offset = util.by_pixel( 27.5,  3), show_shadow = true },
+                { variation = 19, main_offset = util.by_pixel( 27.5,  3), shadow_offset = util.by_pixel( 27.5,  3), show_shadow = true }
             }
         ),
         circuit_wire_max_distance = 5,
@@ -312,10 +312,10 @@ data:extend({
         circuit_connector = circuit_connector_definitions.create_vector(
             universal_connector_template,
             {
-                { variation = 35, main_offset = util.by_pixel( 30.625,  27.625), shadow_offset = util.by_pixel( 30.625,  27.625), show_shadow = true },
-                { variation = 35, main_offset = util.by_pixel( 30.625,  27.625), shadow_offset = util.by_pixel( 30.625,  27.625), show_shadow = true },
-                { variation = 35, main_offset = util.by_pixel( 30.625,  27.625), shadow_offset = util.by_pixel( 30.625,  27.625), show_shadow = true },
-                { variation = 35, main_offset = util.by_pixel( 30.625,  27.625), shadow_offset = util.by_pixel( 30.625,  27.625), show_shadow = true }
+                { variation = 19, main_offset = util.by_pixel( 27.5,  3), shadow_offset = util.by_pixel( 27.5,  3), show_shadow = true },
+                { variation = 19, main_offset = util.by_pixel( 27.5,  3), shadow_offset = util.by_pixel( 27.5,  3), show_shadow = true },
+                { variation = 19, main_offset = util.by_pixel( 27.5,  3), shadow_offset = util.by_pixel( 27.5,  3), show_shadow = true },
+                { variation = 19, main_offset = util.by_pixel( 27.5,  3), shadow_offset = util.by_pixel( 27.5,  3), show_shadow = true }
             }
         ),
         circuit_wire_max_distance = 5,
@@ -584,10 +584,10 @@ data:extend({
         circuit_connector = circuit_connector_definitions.create_vector(
             universal_connector_template,
             {
-                { variation = 35, main_offset = util.by_pixel( 30.625,  27.625), shadow_offset = util.by_pixel( 30.625,  27.625), show_shadow = true },
-                { variation = 35, main_offset = util.by_pixel( 30.625,  27.625), shadow_offset = util.by_pixel( 30.625,  27.625), show_shadow = true },
-                { variation = 35, main_offset = util.by_pixel( 30.625,  27.625), shadow_offset = util.by_pixel( 30.625,  27.625), show_shadow = true },
-                { variation = 35, main_offset = util.by_pixel( 30.625,  27.625), shadow_offset = util.by_pixel( 30.625,  27.625), show_shadow = true }
+                { variation = 19, main_offset = util.by_pixel( 27.5,  3), shadow_offset = util.by_pixel( 27.5,  3), show_shadow = true },
+                { variation = 19, main_offset = util.by_pixel( 27.5,  3), shadow_offset = util.by_pixel( 27.5,  3), show_shadow = true },
+                { variation = 19, main_offset = util.by_pixel( 27.5,  3), shadow_offset = util.by_pixel( 27.5,  3), show_shadow = true },
+                { variation = 19, main_offset = util.by_pixel( 27.5,  3), shadow_offset = util.by_pixel( 27.5,  3), show_shadow = true }
             }
         ),
         circuit_wire_max_distance = 5,
