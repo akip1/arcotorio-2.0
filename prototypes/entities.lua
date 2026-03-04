@@ -42,6 +42,17 @@ data:extend({
             insufficient_input = {r = 1, g = 1, b = 0, a = 1},
             idle = {1, 0, 1, 1}
         },
+        -- thank you quezler
+        circuit_connector = circuit_connector_definitions.create_vector(
+            universal_connector_template,
+            {
+                { variation = 35, main_offset = util.by_pixel( 30.625,  27.625), shadow_offset = util.by_pixel( 30.625,  27.625), show_shadow = true },
+                { variation = 35, main_offset = util.by_pixel( 30.625,  27.625), shadow_offset = util.by_pixel( 30.625,  27.625), show_shadow = true },
+                { variation = 35, main_offset = util.by_pixel( 30.625,  27.625), shadow_offset = util.by_pixel( 30.625,  27.625), show_shadow = true },
+                { variation = 35, main_offset = util.by_pixel( 30.625,  27.625), shadow_offset = util.by_pixel( 30.625,  27.625), show_shadow = true }
+            }
+        ),
+        circuit_wire_max_distance = 5,
         graphics_set = {
             working_visualisations = {
                 {
@@ -298,6 +309,16 @@ data:extend({
         module_specification = {
             module_slots = 2
         },
+        circuit_connector = circuit_connector_definitions.create_vector(
+            universal_connector_template,
+            {
+                { variation = 35, main_offset = util.by_pixel( 30.625,  27.625), shadow_offset = util.by_pixel( 30.625,  27.625), show_shadow = true },
+                { variation = 35, main_offset = util.by_pixel( 30.625,  27.625), shadow_offset = util.by_pixel( 30.625,  27.625), show_shadow = true },
+                { variation = 35, main_offset = util.by_pixel( 30.625,  27.625), shadow_offset = util.by_pixel( 30.625,  27.625), show_shadow = true },
+                { variation = 35, main_offset = util.by_pixel( 30.625,  27.625), shadow_offset = util.by_pixel( 30.625,  27.625), show_shadow = true }
+            }
+        ),
+        circuit_wire_max_distance = 5,
         graphics_set = {
             status_colors = {
                 insufficient_input = {r = 1, g = 1, b = 0, a = 1},
@@ -560,6 +581,16 @@ data:extend({
         module_specification = {
             module_slots = 3
         },
+        circuit_connector = circuit_connector_definitions.create_vector(
+            universal_connector_template,
+            {
+                { variation = 35, main_offset = util.by_pixel( 30.625,  27.625), shadow_offset = util.by_pixel( 30.625,  27.625), show_shadow = true },
+                { variation = 35, main_offset = util.by_pixel( 30.625,  27.625), shadow_offset = util.by_pixel( 30.625,  27.625), show_shadow = true },
+                { variation = 35, main_offset = util.by_pixel( 30.625,  27.625), shadow_offset = util.by_pixel( 30.625,  27.625), show_shadow = true },
+                { variation = 35, main_offset = util.by_pixel( 30.625,  27.625), shadow_offset = util.by_pixel( 30.625,  27.625), show_shadow = true }
+            }
+        ),
+        circuit_wire_max_distance = 5,
         graphics_set = {
             status_colors = {
                 insufficient_input = {r = 1, g = 1, b = 0, a = 1},
