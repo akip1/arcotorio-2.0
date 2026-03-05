@@ -195,7 +195,7 @@ local folds = {
         icon_size = 64,
         tint = {0.5,0.5,0},
         subgroup = "McArco-sphere-arcofolding",
-        order = "a[McArco-sphere]"
+        order = "b[McArco-sphere]"
     },
     {
         ingredients = {
@@ -215,7 +215,7 @@ local folds = {
         icon_size = 64,
         tint = {0.5,0.5,0},
         subgroup = "Arco-planet-arcofolding",
-        order = "a[Arco-planet]"
+        order = "b[Arco-planet]"
     },
     {
         ingredients = {
@@ -234,7 +234,7 @@ local folds = {
         icon_size = 64,
         tint = {0.5,0.5,0},
         subgroup = "Arco-boulder-arcofolding",
-        order = "a[Arco-boulder]"
+        order = "b[Arco-boulder]"
     },
     {
         ingredients = {
@@ -250,7 +250,7 @@ local folds = {
         icon_size = 64,
         tint = {0.5,0.5,0},
         subgroup = "Arco-orb-arcofolding",
-        order = "a[Arco-orb]"
+        order = "b[Arco-orb]"
     },
     {
         name = "hand-Arco-bead-initialize",
@@ -267,7 +267,7 @@ local folds = {
         tint = {0.5,0.5,0},
         subgroup = "hand-Arco-bead-arcofolding",
         category = "handcrafting",
-        order = "a[Arco-bead]"
+        order = "b[Arco-bead]"
     },
     {
         ingredients = {
@@ -282,7 +282,7 @@ local folds = {
         icon_size = 64,
         tint = {0.5,0.5,0},
         subgroup = "Arco-bead-arcofolding",
-        order = "a[Arco-bead]"
+        order = "b[Arco-bead]"
     }
 }
 
@@ -392,7 +392,7 @@ local function process_table(item_table, ing_count, out_count, subgroup, ing_siz
     recipe.category = "arcofolding"
     recipe.energy_required = 2
     recipe.enabled = false
-    recipe.order = "b["..recipe.name.."]"
+    recipe.order = "aa["..recipe.name.."]"
 
     recipe.crafting_machine_tint = {
         primary     = item_table[index].primary                or UNASSIGNED_COLOR,
@@ -427,7 +427,7 @@ for _, recipe_data in pairs(folds) do
         ingredients = recipe_data.ingredients,
         energy_required = recipe_data.seconds or 1,
         enabled = false,
-        order = recipe_data.order or ("b["..name.."]"),
+        order = recipe_data.order or ("a["..name.."]"),
         localised_name = recipe_data.localised_name,
         crafting_machine_tint = {
             primary =    recipe_data.primary    or UNASSIGNED_COLOR,
