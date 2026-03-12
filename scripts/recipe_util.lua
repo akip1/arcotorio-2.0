@@ -81,7 +81,9 @@ return {
         end
 
         -- Modify recipe time
-        recipe.energy_required = (recipe.energy_required or 0.5) * scale
+        if improve > 0 then
+            recipe.energy_required = (recipe.energy_required or 0.5) * scale
+        end
 
         -- Extend the data with the modified recipe
         if recipe then
