@@ -117,8 +117,8 @@ function arcotorio_util.modify_results(recipe, item1, item2, scale, improve)
             recipe_container.results = recipe_container.results or {}
             table.insert(recipe_container.results, {type = "item", name = recipe_container.result, amount = (recipe_container.result_count or 1) * (scale + improve)})
         end
-        table.insert(recipe_container.results, {type = "item", name = item1, amount = scale, catalyst_amount = scale})
-        table.insert(recipe_container.results, {type = "item", name = item2, amount = scale, catalyst_amount = scale})
+        table.insert(recipe_container.results, {type = "item", name = item1, amount = scale, ignored_by_productivity = scale})
+        table.insert(recipe_container.results, {type = "item", name = item2, amount = scale, ignored_by_productivity = scale})
 
         local item = return_item(recipe_container.main_product)
         if item and not recipe.icons and not recipe.icon then fix_icon(recipe, item) end
@@ -139,14 +139,14 @@ function arcotorio_util.modify_results(recipe, item1, item2, scale, improve)
     local process_recipe = function(recipe_container)
         if recipe_container == nil then return end
 
-        if not recipe_container.result and recipe_container.results and not recipe_container.results[1] then
+        if not recipe_container.results then
             log("Arcotorio WARNING: A recipe ("
             ..recipe.name..
             ") has no result. This may be fine, but if you are experiencing issues please contact mod author")
             return false
         end
 
-        if recipe_container.result or (recipe_container.results and #recipe_container.results == 1) then
+        if #recipe_container.results == 1 then
             single_result(recipe_container)
         elseif recipe_container.results then
             multi_result(recipe_container)
@@ -156,7 +156,7 @@ function arcotorio_util.modify_results(recipe, item1, item2, scale, improve)
 
     if improve < 1 then scale = 1 end
 
-    if process_recipe(recipe.normal) or process_recipe(recipe.expensive) or process_recipe(recipe) then
+    if process_recipe(recipe) then
         return true
     end
     return false
